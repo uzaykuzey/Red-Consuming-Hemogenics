@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MechSerumBase">
+    <defName>RCH_RedConsumerImplanter</defName>
+    <label>red consumer gene implanter</label>
+    <description>Use this artifact on a hemogenic pawn to grant them the Red Consumer Gene.</description>
+    <graphicData>
+      <texPath>Items/RedConsumerArtifact</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+	  <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <tradeability>All</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>300</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>RedConsumingHemogenics.CompUseEffect_ImplantRedConsumer</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <descriptionHyperlinks>
+      <GeneDef>RCH_Gene_RedConsumer</GeneDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+</Defs>

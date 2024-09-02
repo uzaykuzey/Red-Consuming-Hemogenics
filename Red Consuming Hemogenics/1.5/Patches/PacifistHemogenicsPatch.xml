@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Sanguophage</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			<li Class="PatchOperationAdd">
+                <xpath>/Defs/PreceptDef[defName="RCH_Hemogenics_Pacifist"]/comps</xpath>
+                    <value>
+                        <li Class="PreceptComp_SelfTookMemoryThought">
+                            <thought>RCH_ConsumedAnimalHemogenPack</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_ConsumedAnimalHemogenPack_Know</thought>
+                        </li>
+                        <li Class="PreceptComp_SelfTookMemoryThought">
+                            <thought>RCH_BloodfedOnAnimal</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_BloodfedOnAnimal_Know</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_BloodfedOnAnimal_Know_Opinion</thought>
+                        </li>
+                        <li Class="PreceptComp_SelfTookMemoryThought">
+                            <thought>RCH_ConsumedCorpseHemogenPack</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_ConsumedCorpseHemogenPack_Know</thought>
+                        </li>
+                        <li Class="PreceptComp_SelfTookMemoryThought">
+                            <thought>RCH_BloodfedOnCorpse</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_BloodfedOnCorpse_Know</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_BloodfedOnCorpse_Know_Opinion</thought>
+                        </li>
+                        <li Class="PreceptComp_KnowsMemoryThought">
+                            <thought>RCH_UsedHemosmosis</thought>
+                        </li>
+                    </value>
+				</li>			
+			</operations>
+		</match>
+	</Operation>
+</Patch>

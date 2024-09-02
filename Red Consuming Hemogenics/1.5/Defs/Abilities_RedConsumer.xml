@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef ParentName="AbilityTouchBase">
+    <defName>RCH_RedConsumer</defName>
+    <label>consume red</label>
+    <description>Bite the target item and extract hemogen directly from its red color. The target will be destroyed. The amount of hemogen gained is determined by the item's weight.</description>
+    <iconPath>UI/Icons/Genes/RedConsumer</iconPath>
+    <category>Sanguophage</category>
+    <displayOrder>150</displayOrder>
+    <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+    <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+    <hostile>false</hostile>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>2</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+        <canTargetItems>true</canTargetItems>
+        <thingCategory>Item</thingCategory>
+        <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityRequiresCapacity">
+        <capacity>Eating</capacity>
+      </li>
+    </comps>
+    <abilityClass>RedConsumingHemogenics.Ability_RedConsumer</abilityClass>
+    <descriptionHyperlinks>
+      <GeneDef>RCH_Gene_RedConsumer</GeneDef>
+    </descriptionHyperlinks>
+  </AbilityDef>
+
+</Defs>

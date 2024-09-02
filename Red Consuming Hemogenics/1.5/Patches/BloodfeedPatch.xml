@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AbilityDef[defName="Bloodfeed"]/comps</xpath>
+    <value>
+      <li Class="RedConsumingHemogenics.CompProperties_BloodfeedAbilityMood">
+        <thoughtDefSelfMood>RCH_BloodfedOnHuman</thoughtDefSelfMood>
+        <thoughtDefWitnessMood>RCH_BloodfedOnHuman_Know</thoughtDefWitnessMood>
+        <thoughtDefWitnessSocial>RCH_BloodfedOnHuman_Know_Opinion</thoughtDefWitnessSocial>
+      </li>
+    </value>
+  </Operation>
+</Patch>

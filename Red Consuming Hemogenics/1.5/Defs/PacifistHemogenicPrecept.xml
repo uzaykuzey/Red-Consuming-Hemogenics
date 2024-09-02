@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- New Issue: Hemogenics -->
+
+  <IssueDef>
+    <defName>RCH_Hemogenics</defName>
+    <label>hemogenics</label>
+    <iconPath>UI/Issues/RedConsumerCategory</iconPath>
+  </IssueDef>
+  
+  <PreceptDef>
+    <defName>RCH_Hemogenics_Pacifist</defName>
+    <issue>RCH_Hemogenics</issue>
+    <label>pacifist</label>
+    <description>Consuming hemogen packs or bloodfeeding is abhorrent and deeply disturbing. Instead of using those methods, hemogenic believers of this precept prefer to fulfill their hemogen needs by consuming the red color of items.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>50</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <defaultSelectionWeight>1</defaultSelectionWeight>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <thought>RCH_ConsumedRed</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <thought>RCH_ConsumedHemogenPack</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <thought>RCH_ConsumedHemogenPack_Know</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <thought>RCH_BloodfedOnHuman</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <thought>RCH_ConsumedHemogenPackColor</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <thought>RCH_BloodfedOnHuman_Know</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <thought>RCH_BloodfedOnHuman_Know_Opinion</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>RCH_Hemogenics_Normal</defName>
+    <issue>RCH_Hemogenics</issue>
+    <label>normal</label>
+    <description>This ideology treats hemogenics like most other ideologies.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>50</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <defaultSelectionWeight>19</defaultSelectionWeight>
+  </PreceptDef>
+
+  <!-- ThoughtDefs for Hemogenics: Pacifist -->
+
+  <!-- Human Blood -->
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedHemogenPack</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>consumed hemogen pack</label>
+        <description>Consuming hemogen packs is deeply unsettling and against my beliefs.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedHemogenPack_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>consumed hemogen pack</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnHuman</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>bloodfed on human</label>
+        <description>Bloodfeeding on a human is an offense against everything I believe.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnHuman_Know</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>we bloodfed on human</label>
+        <description>Someone in our group bloodfed on a human. This is deeply disturbing.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnHuman_Know_Opinion</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>bloodfed on human</label>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Animal Blood -->
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedAnimalHemogenPack</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>consumed animal hemogen pack</label>
+        <description>Consuming animal hemogen packs is deeply unsettling and against my beliefs.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedAnimalHemogenPack_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>consumed animal hemogen pack</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnAnimal</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>bloodfed on animal</label>
+        <description>Bloodfeeding on an animal is an offense against everything I believe.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnAnimal_Know</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>we bloodfed on animal</label>
+        <description>Someone in our group bloodfed on an animal. This is disturbing.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnAnimal_Know_Opinion</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>bloodfed on animal</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  <!-- Corpse Blood -->
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedCorpseHemogenPack</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>consumed corpse hemogen pack</label>
+        <description>Consuming corpse hemogen packs is an offense against everything I believe.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedCorpseHemogenPack_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>consumed corpse hemogen pack</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnCorpse</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>bloodfed on corpse</label>
+        <description>Bloodfeeding on a corpse is an offense against everything I believe.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnCorpse_Know</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>we bloodfed on corpse</label>
+        <description>Someone in our group bloodfed on a corpse. This is deeply disturbing.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_BloodfedOnCorpse_Know_Opinion</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>5</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>bloodfed on corpse</label>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Misc -->
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedHemogenPackColor</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>consumed color of hemogen pack</label>
+        <description>I know this isn't the same as consuming blood directly, but it's still disturbing to consume its color.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_UsedHemosmosis</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>drained blood from the environment.</label>
+        <description>Draining blood from my environment to gain hemogen is unsettling.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>RCH_ConsumedRed</defName>
+    <durationDays>3</durationDays>
+    <stages>
+      <li>
+        <label>consumed red</label>
+        <description>I fulfilled my hemogen needs without harming anyone.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

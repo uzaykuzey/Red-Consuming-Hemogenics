@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GeneDef>
+    <defName>RCH_Gene_RedConsumer</defName>
+    <label>red consumer</label>
+    <description>Carriers of this gene have small retractable fangs and an organ on the roof of their mouth that can extract the color red from items. They can bite a red item to gain hemogen directly, destroying the item in the process.</description>
+    <displayCategory>Hemogen</displayCategory>
+    <biostatArc>0</biostatArc>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <prerequisite>Hemogenic</prerequisite>
+    <abilities>
+      <li>
+        <defName>RCH_RedConsumer</defName>
+      </li>
+    </abilities>
+    <iconPath>UI/Icons/Genes/RedConsumer</iconPath>
+    <descriptionHyperlinks>
+      <AbilityDef>RCH_RedConsumer</AbilityDef>
+    </descriptionHyperlinks>
+  </GeneDef>
+</Defs>

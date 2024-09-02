@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="HemogenPack"]/ingestible/outcomeDoers</xpath>
+    <value>
+      <li Class="RedConsumingHemogenics.IngestedHemogenPack">
+					<thoughtDefSelfMood>RCH_ConsumedHemogenPack</thoughtDefSelfMood>
+          <thoughtDefWitnessSocial>RCH_ConsumedHemogenPack_Know</thoughtDefWitnessSocial>
+		</li>
+    </value>
+  </Operation>
+</Patch>
