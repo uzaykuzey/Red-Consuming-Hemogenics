@@ -110,7 +110,7 @@ namespace RedConsumingHemogenics
                 {
                     if (thingDef.category == ThingCategory.Item && Ability_RedConsumer.IsItemColorRed(thingDef) && thingDef.label != "elemental dust")
                     {
-                        options.Add(new FloatMenuOption(thingDef.label, delegate
+                        options.Add(new FloatMenuOption(thingDef.label.ToLower(), delegate
                         {
                             if (itemNumber == 1)
                             {
