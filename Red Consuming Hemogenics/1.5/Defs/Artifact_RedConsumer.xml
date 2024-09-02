@@ -33,6 +33,9 @@
         <soundOnUsed>MechSerumUsed</soundOnUsed>
       </li>
       <li Class="CompProperties_UseEffectDestroySelf" />
+      <li Class="RedConsumingHemogenics.RedConsumingHemogenics_RedItemProperty">
+        <isRed>true</isRed>
+      </li>
     </comps>
     <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>

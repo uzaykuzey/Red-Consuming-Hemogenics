@@ -18,7 +18,7 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>vanillaracesexpanded.sanguophage</li>
 	</loadAfter>
-	<description>Adds a special gene that lets hemogenic pawns fill their hemogen by consuming the color of red items. Perfect for pacifist colonies that also contains hemogenic pawns. Similar to the vampires and Marceline in Adventure Time.
+	<description>Adds a special gene that lets hemogenic pawns fill their hemogen by consuming the color of red items. Perfect for pacifist colonies that also contains hemogenic pawns. Similar to the vampires and Marceline from Adventure Time.
 
 Features:
 
@@ -34,7 +34,12 @@ A rare artifact that can be used to give a hemogenic pawn the red consumer gene.
 Pacifist Hemogenics Precept:
 A precept that punishes pawns for consuming blood and rewards them for consuming red items. If Ideology is enabled, it can be used to increase the roleplay depth.
 
+Automatic Red Item Consuming:
+When pawns fall below the hemogen threshold, they first search for and consume designated red items. The items to be searched for are selected in the mod settings to prevent random pawns from consuming valuable items that happen to be red. This automated behavior occurs only if the pawn can walk up to and consume the item. For medical emergencies, it's advised to have extra hemogen packs available. Additionally, in the mod settings, you can configure pacifist hemogenic pawns to avoid negative mood effects when consuming hemogen packs in a medical environment.
+
 This is my first Rimworld mod, so please feel free to report bugs!
+
+Art by: https://steamcommunity.com/id/guneassu/
 	</description>
 </ModMetaData>
 

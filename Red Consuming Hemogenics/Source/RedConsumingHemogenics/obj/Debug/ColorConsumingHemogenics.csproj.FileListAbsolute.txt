@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Color Consuming Hemogenics\Assemblies\ColorConsumingHemogenics.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Color Consuming Hemogenics\Source\ColorConsumingHemogenics\obj\Debug\ColorConsumingHemogenics.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Color Consuming Hemogenics\Source\ColorConsumingHemogenics\obj\Debug\ColorConsumingHemogenics.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Color Consuming Hemogenics\Source\ColorConsumingHemogenics\obj\Debug\ColorConsumingHemogenics.dll

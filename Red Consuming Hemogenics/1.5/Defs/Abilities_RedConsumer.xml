@@ -35,10 +35,17 @@
         <capacity>Eating</capacity>
       </li>
     </comps>
-    <abilityClass>RedConsumingHemogenics.Ability_RedConsumer</abilityClass>
+    <!--<abilityClass>RedConsumingHemogenics.Ability_RedConsumer</abilityClass>-->
     <descriptionHyperlinks>
       <GeneDef>RCH_Gene_RedConsumer</GeneDef>
     </descriptionHyperlinks>
+    <jobDef>RCH_ConsumeRed</jobDef>
   </AbilityDef>
 
+  <JobDef>
+		<defName>RCH_ConsumeRed</defName>
+		<driverClass>RedConsumingHemogenics.JobDriver_ConsumeRed</driverClass>
+		<reportString>consuming red from TargetA</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
 </Defs>
