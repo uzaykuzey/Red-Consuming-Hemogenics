@@ -40,6 +40,11 @@ namespace RedConsumingHemogenics
         {
             base.Activate(target, dest);
 
+            return Activate(target, dest, pawn);
+        }
+
+        public static bool Activate(LocalTargetInfo target, LocalTargetInfo dest, Pawn pawn)
+        {
             if (target.Thing is ThingWithComps item)
             {
                 if (item is Corpse _)
@@ -57,11 +62,11 @@ namespace RedConsumingHemogenics
                         Gene_Hemogen hemogenGene = pawn.genes?.GetGene(GeneDefOf.Hemogenic) as Gene_Hemogen;
                         if (hemogenGene != null)
                         {
-                            if(IsHemogenPack(item.def))
+                            if (IsHemogenPack(item.def))
                             {
                                 IngestedHemogenPack.GiveToughtsRelatedToPacifistHemogenicPrecept(pawn, "RCH_ConsumedHemogenPackColor");
                             }
-                            else if(IngestedHemogenPack.DoPawnHavePreceptHemogenicsPacifist(casterPawn))
+                            else if (IngestedHemogenPack.DoPawnHavePreceptHemogenicsPacifist(casterPawn))
                             {
                                 casterPawn.needs.mood?.thoughts.memories.TryGainMemory(ThoughtDef.Named("RCH_ConsumedRed"), null, casterPawn.Ideo.PreceptsListForReading.Find(precept => precept.def.defName == "RCH_Hemogenics_Pacifist"));
                             }
@@ -71,7 +76,7 @@ namespace RedConsumingHemogenics
                             if (requiredHemogenAmount <= hemogenFromSingleItem * item.stackCount)
                             {
                                 hemogenGain = requiredHemogenAmount;
-                                stackUse = (int) Mathf.Ceil(requiredHemogenAmount / hemogenFromSingleItem);
+                                stackUse = (int)Mathf.Ceil(requiredHemogenAmount / hemogenFromSingleItem);
                             }
                             else
                             {
@@ -79,9 +84,9 @@ namespace RedConsumingHemogenics
                                 stackUse = item.stackCount;
                             }
                             hemogenGene.Value += hemogenGain;
-                            int hemogenGainAmountInt=(int) Mathf.Floor(hemogenGain*100);
+                            int hemogenGainAmountInt = (int)Mathf.Floor(hemogenGain * 100);
                             Messages.Message($"The pawn's hemogen level increased by {hemogenGainAmountInt} due to consuming the color of {item.LabelNoCount} x{stackUse}.", MessageTypeDefOf.PositiveEvent);
-                            if(stackUse>=item.stackCount)
+                            if (stackUse >= item.stackCount)
                             {
                                 item.Destroy();
                             }
@@ -89,7 +94,7 @@ namespace RedConsumingHemogenics
                             {
                                 item.stackCount -= stackUse;
                             }
-                            
+
                         }
                     }
                     return true;
@@ -116,6 +121,11 @@ namespace RedConsumingHemogenics
         public static bool IsItemColorRed(ThingDef thingDef)
         {
             if(thingDef==null)
+            {
+                return false;
+            }
+
+            if(thingDef.IsCorpse)
             {
                 return false;
             }

@@ -135,7 +135,7 @@ namespace RedConsumingHemogenics
 
             use.initAction = delegate
             {
-                job.ability.Activate(TargetA, TargetA);
+                Ability_RedConsumer.Activate(TargetA, TargetA, pawn);
             };
             use.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return use;
